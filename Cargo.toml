@@ -11,3 +11,7 @@ assert_cmd = "2.0"
 name = "p2557"
 path = "bin/p2557.rs"
 
+[[bin]]
+name = "p1000"
+path = "bin/p1000.rs"
+
