@@ -23,3 +23,7 @@ path = "bin/p1001.rs"
 name = "p10998"
 path = "bin/p10998.rs"
 
+[[bin]]
+name = "p1008"
+path = "bin/p1008.rs"
+
