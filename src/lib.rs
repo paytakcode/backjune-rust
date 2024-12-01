@@ -19,7 +19,7 @@ pub fn create_command(bin_name: &str) -> anyhow::Result<Command> {
     Command::cargo_bin(bin_name).context(format!("Failed to create command for {}", bin_name))
 }
 
-pub fn measure_execution_time<F>(func: F, count: Option<i32>) -> anyhow::Result<()>
+pub fn measure_execution_time<F>(func: F, test_number: Option<i32>) -> anyhow::Result<()>
 where
     F: FnOnce() -> anyhow::Result<()>,
 {
@@ -29,7 +29,7 @@ where
     let result = func();
     let duration = start.elapsed();
 
-    match count {
+    match test_number {
         Some(c) => writeln!(handle, "Running time[{}]: {:?}", c, duration),
         None => writeln!(handle, "Running time: {:?}", duration),
     }
