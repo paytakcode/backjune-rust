@@ -1,0 +1,13 @@
+[package]
+name = "backjoon-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.93"
+assert_cmd = "2.0"
+
+[[bin]]
+name = "p2557"
+path = "bin/p2557.rs"
+
